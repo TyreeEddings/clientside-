@@ -16,8 +16,9 @@ section {
   background:linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-	height: 100vh; 
-   Width: 1200px ;
+ height: 100vh;
+  margin: 10px; 
+   align: center; 
 	grid-area: section;    
 
 
@@ -69,4 +70,3 @@ section {
 		background-position: 0% 50%;
 	}
   
-    
