@@ -1,9 +1,8 @@
-}
 header {
 	background: lightblue;
 	grid-area: header;
-  margin: 0px 0px 10px;
-
+  margin: 0px 0px 0px;
+  
 }
 
 nav {
@@ -16,9 +15,8 @@ section {
   background:linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
- height: 100vh;
-  margin: 10px; 
-   align: center; 
+	height: 100vh; 
+    ;
 	grid-area: section;    
 
 
@@ -30,11 +28,19 @@ section {
 
 
 }
+
+footer {
+	background: lightblue;
+	grid-area: footer;
+}
+
+header, nav, section, aside, footer {
+	padding: 5px;
+}
 .dropdown {
   position: relative;
   display: inline-block;
-  padding: 0px 0px 1px;
-  align: center
+  padding: 0px 0px 1px
 }
 .dropdown-content a {
   color: black;
@@ -70,3 +76,6 @@ section {
 		background-position: 0% 50%;
 	}
   
+ 
+
+
