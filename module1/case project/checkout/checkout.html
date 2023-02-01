@@ -1,5 +1,4 @@
-
-   <!Doctype html>
+ <!Doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -8,79 +7,26 @@
     <title>Final Project</title>
      <script src="checkout.js" defer></script>
       <link rel="stylesheet" href="checkout.css">
-     <style>
-      div.gallery {
-        border: 1px solid #ccc;
-        border-radius: 20px;
-         transition: 0.3s;
-        }
-      
-      div.gallery:hover {
-        border: 1px solid #777;
-        background-color: lightgrey;
-        }
-      
-      div.gallery img {
-        width: 100%;
-        height: auto;
-         border-radius: 20px
-        }
-      
-      div.desc {
-        padding: 15px;
-        text-align: center;
-      }
-      
-      * {
-        box-sizing: border-box;
-      }
-      
-      .responsive {
-        padding: 0 6px;
-        float: left;
-        width: 24.99999%;
-      }
-      
-      @media only screen and (max-width: 700px) {
-        .responsive {
-          width: 49.99999%;
-          margin: 6px 0;
-        }
-      }
-      
-      @media only screen and (max-width: 500px) {
-        .responsive {
-          width: 100%;
-        }
-      }
-      
-      .clearfix:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-      </style>
-    </head>
-
-
-
-   <body>
+		
+		 <title>Final Project</title>
+    
     <div class="header">
       <h1>Tyree's Coffee</h1>
-   
-   
+    
+    
     <div>
       <ul class="nav">
-  <li><a href="/clientside-/module1/case project/index.html">Home</a></li>
-  <li><a href="/clientside-/module1/case project/shop/shop.html">Shop</a></li>
-  <li><a href="/clientside-/module1/case project/gear/gear.html">Gear</a></li>
-  <li><a href="/clientside-/module1/case project/hours/hours.html">Hours</a></li>
-  <li><a href="/clientside-/module1/case project/contactme/contactme.html">Contact Me</a></li>
+  <li><a href="/Final/">Home</a></li>
+  <li><a href="/Final/shop/shop.html">Shop</a></li>
+  <li><a href="/Final/gear/gear.html">Gear</a></li>
+  <li><a href="/Final/hours/hours.html">Hours</a></li>
+  <li><a href="/Final/contactme/contactme.html">Contact Me</a></li>
 </ul>
       </div>
     </div>
- <div class="main">
- 
+
+
+<div class="main">
   <h1>Shopping cart</h1>
   <h2 class="sub-heading">Free shipping from $100!</h2>
 
@@ -90,7 +36,7 @@
       <script id="shopping-cart--list-item-template" type="text/template">
         <li class="_grid shopping-cart--list-item">
           <div class="_column product-image">
-            
+            <img class="product-image--img" src="{{=img}}" alt="Item image" />
           </div>
           <div class="_column product-info">
             <h4 class="product-name">{{=name}}</h4>
