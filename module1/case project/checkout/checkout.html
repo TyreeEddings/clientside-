@@ -1,4 +1,4 @@
- <!Doctype html>
+<!Doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -25,62 +25,44 @@
   <li><a href="/clientside-/module1/case project/checkout/checkout.html">Checkout</a></li>
   <li><a href="/clientside-/module1/case project/contactme/contactme.html">Contact Me</a></li>
 </ul>
+    
+      
+      <div> Checout your prices with this calculator :)</div>
+      
+      
       </div>
     </div>
-
-
-<div class="main">
-  <h1>Shopping cart</h1>
-  <h2 class="sub-heading">Free shipping from $100!</h2>
-
-  <section class="shopping-cart">
-    <ol class="ui-list shopping-cart--list" id="shopping-cart--list">
-
-      <script id="shopping-cart--list-item-template" type="text/template" src="checkout.js">
-        <li class="_grid shopping-cart--list-item">
-          <div class="_column product-image">
-            <img class="product-image--img" src="{{=img}}" alt="Item image" />
-          </div>
-          <div class="_column product-info">
-            <h4 class="product-name">{{=name}}</h4>
-            <p class="product-desc">{{=desc}}</p>
-            <div class="price product-single-price">${{=price}}</div>
-          </div>
-          <div class="_column product-modifiers" data-product-price="{{=price}}">
-            <div class="_grid">
-              <button class="_btn _column product-subtract">&minus;</button>
-              <div class="_column product-qty">0</div>
-              <button class="_btn _column product-plus">&plus;</button>
-            </div>
-            <button class="_btn entypo-trash product-remove">Remove</button>
-            <div class="price product-total-price">$0.00</div>
-          </div>
-        </li>
-      </script>
-
-    </ol>
-
-    <footer class="_grid cart-totals">
-      <div class="_column subtotal" id="subtotalCtr">
-        <div class="cart-totals-key">Subtotal</div>
-        <div class="cart-totals-value">$0.00</div>
+<div class="calculator">
+  <div class="input" id="input"></div>
+  <div class="buttons">
+    <div class="operators">
+      <div>+</div>
+      <div>-</div>
+      <div>&times;</div>
+      <div>&divide;</div>
+    </div>
+    <div class="leftPanel">
+      <div class="numbers">
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
       </div>
-      <div class="_column shipping" id="shippingCtr">
-        <div class="cart-totals-key">Shipping</div>
-        <div class="cart-totals-value">$0.00</div>
+      <div class="numbers">
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
       </div>
-      <div class="_column taxes" id="taxesCtr">
-        <div class="cart-totals-key">Taxes (6%)</div>
-        <div class="cart-totals-value">$0.00</div>
+      <div class="numbers">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
       </div>
-      <div class="_column total" id="totalCtr">
-        <div class="cart-totals-key">Total</div>
-        <div class="cart-totals-value">$0.00</div>
+      <div class="numbers">
+        <div>0</div>
+        <div>.</div>
+        <div id="clear">C</div>
       </div>
-      <div class="_column checkout">
-        <button class="_btn checkout-btn entypo-forward">Checkout</button>
-      </div>
-    </footer>
-
-  </section>
+    </div>
+    <div class="equal" id="result">=</div>
+  </div>
 </div>
