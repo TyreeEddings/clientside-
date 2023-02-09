@@ -6,7 +6,7 @@
       Author: 
       Date:   
 
-      Filename: project03-02.js
+      Filename: handson3-2.js
 */
 
 let captions = new Array(14);
