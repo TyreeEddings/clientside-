@@ -21,7 +21,7 @@ select.addEventListener('change', (event) => {
     message = 'A person who drinks black coffee tends to be quite single-minded. Some black coffee drinkers may be very fitness orientated, with an Americano being a well-known low-calorie order. This can mean that this person is a determined, focused and driven individual that looks after themselves; making them self-sufficient and empowered';
   }
   else {
-    message = 'Please select a language from the list.';
+    message = 'Please select a flavor from the list.';
   }
 
  
