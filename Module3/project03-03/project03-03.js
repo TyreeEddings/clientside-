@@ -1,9 +1,11 @@
 /*    JavaScript 7th Edition
       Chapter 3
       Project 03-03
+
       Application to generate a movie list
-      Author:Conner Garris 
-      Date:2/7/2023
+      Author:Tyree Eddings 
+      Date:
+
       Filename: project03-03.js
 */
 
@@ -59,7 +61,7 @@ links[9] = "https://www.imdb.com/title/tt0137523/?ref_=adv_li_tt";
 let htmlCode = ""
 
 for (let count = 0; count < titles.length; count++){
-      htmlCode += "<tr><td><a href='" + links[count] + "'>" + titles[count] + "</a><td><td>" + summaries[count] + "</td><td>" + ratings[count] + "</td></tr>"
+      htmlCode += "<tr><td><a href='" + links[count] + "'>" + titles[count] + "</a><td>" + summaries[count] + "</td><td>" + ratings[count] + "</td></tr>"
 }
 
 //htmlCode += "<tr><td><a href='" + links[count] + "'>" + titles[count] + "</a><td><td>" + summaries[" + count + "] + "</td><td>" + rating[count] + "</td></tr>"
