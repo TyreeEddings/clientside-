@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+  <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -75,56 +76,131 @@ input[type=submit]:hover {
       
       </div>
     </div>
-  </head>
-  <body>
- <div class="div1"> 
-  <h1> Contact Me</h1>
-  
-   <div style="position:center">
-   <img class="img" src="https://static.vecteezy.com/system/resources/previews/000/602/566/large_2x/vector-coffee-logo.jpg">
-    </div>
-  </div>
-    <hr>
+<head>
+	<title>Contact Form</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #F7F7F7;
+		}
 
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+			color: #333;
+		}
 
+		form {
+			margin: 50px auto;
+			padding: 20px;
+			border-radius: 5px;
+			background-color: #FFF;
+			box-shadow: 0px 0px 10px #888;
+			width: 400px;
+		}
 
-<div class="container">
-  <form name="myForm" action="https://tyreeeddings.github.io/Final/contactme/Thankyou.html">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+		input[type=text], select, textarea {
+			width: 100%;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-top: 6px;
+			margin-bottom: 16px;
+			resize: vertical;
+			font-size: 16px;
+			font-family: Arial, sans-serif;
+			color: #333;
+		}
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+		input[type=submit], input[type=reset] {
+			background-color: #008CBA;
+			color: #FFF;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 16px;
+			font-family: Arial, sans-serif;
+			margin-top: 20px;
+		}
 
-     <label for="fname">Your Email</label>
-    <input type="text" id="fname" name="firstname" placeholder="Ex: PRCCSTUDENT@gmail.com">
-    
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Mexico</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
+		input[type=submit]:hover, input[type=reset]:hover {
+			background-color: #00688B;
+		}
 
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+		label {
+			font-size: 16px;
+			font-family: Arial, sans-serif;
+			color: #333;
+		}
 
-    <input type="submit" value="Submit">
-      <input type="reset" value="Reset">
-  </form>
-</div>
+		.error {
+			color: red;
+			font-size: 14px;
+			font-family: Arial, sans-serif;
+			margin-bottom: 10px;
+		}
 
-</body>
-</html>
+		.success {
+			color: green;
+			font-size: 16px;
+			font-family: Arial, sans-serif;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Contact Me</h1>
+  <h2 style="text-align: center";>If you don't fill a box you will get a error </h2>
+	<form action="#" method="post">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
 
-   <footer>
-     <div style="background-color: lightblue;  border: 1px solid #ccc;
-  border-radius: 20px; padding: 60px">
-   
-   <h3 > About</h3>
-       <hr>
-       <h4></h4>
-       This is my case project for my spring 2023class. 
-       </footer>
-    </html>
-</html>
+		<label for="email">Email:</label>
+		<input type="text" id="email" name="email" required>
+
+		<label for="message">Message:</label>
+		<textarea id="message" name="message" required></textarea>
+
+		<input type="submit" value="Submit">
+		<input type="reset" value="Reset">
+	</form>
+
+	<script>
+		const form = document.querySelector('form');
+		const nameInput = document.querySelector('#name');
+		const emailInput = document.querySelector('#email');
+		const messageInput = document.querySelector('#message');
+
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+
+			let errors = [];
+
+			if (nameInput.value.trim() === '') {
+				errors.push('Please enter your name');
+			}
+
+			if (emailInput.value.trim() === '') {
+				errors.push('Please enter your email');
+			} else if (!validateEmail(emailInput.value)) {
+				errors.push('Please enter a valid email address');
+			}
+
+			if (messageInput.value.trim() === '') {
+				errors.push('Please enter a message');
+			}
+
+			if (errors.length > 0) {
+				showErrors(errors);
+			} else {
+				showSuccess();
+  </script>
+  <div>here's a summary of some common debugging methods that can be used when working with HTML and CSS that I found usefull in this chapter:<br>
+
+Use the browser's developer tools: Most modern web browsers come with built-in developer tools that can be used to debug HTML, CSS, and JavaScript code. You can use these tools to inspect elements, modify styles, and debug JavaScript code.
+<br>
+Validate HTML and CSS: Validating your code can help you identify syntax errors and other issues that may be causing problems. You can use online validation tools to check your code and ensure that it's valid.
+<br>
+Check for typos and syntax errors: Even a small typo or syntax error can cause your code to fail. Make sure that you double-check your code for errors and typos.</Div>
