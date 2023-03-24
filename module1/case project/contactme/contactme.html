@@ -1,5 +1,4 @@
-
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -8,6 +7,207 @@
     <link rel="stylesheet" href="contactme.css">
     <title>Final Project</title>
     <style>
+      /* Style the form container */
+form {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Style the form labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style the form inputs */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+/* Style the form buttons */
+button[type="submit"] {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Style the form validation messages */
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border-color: #f44336;
+}
+
+input:valid,
+select:valid,
+textarea:valid {
+  border-color: #ccc;
+}
+
+/* Style the form checkboxes and radio buttons */
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Style the form header */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: black;
+}
+
+      .header {
+    
+    text-align:Center;
+    line-height:100px;
+    font-family: "Copperplate", "Courier New", monospace;
+    font-size: 32px;
+}
+.nav{
+    border:1px solid white;
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0px 70px 70px  ;
+    text-align:center;
+    line-height: 0px
+}
+.nav li{
+    display:inline;
+}
+.nav a{
+    display:inline-block;
+    padding:10px;
+}     
+  
+}
+
+ul.nav li a {
+  transition: color 0.2s linear;
+  font-size: 18px;
+}
+
+ul.nav li:hover a {
+  color: red;
+}
+
+ul.nav li a {
+  padding: 21px;
+  color: initial;
+  text-decoration: initial;
+}
+.d2{
+  position: absolute;
+    right: 0px;
+    left: 0px;
+}
+.img{
+ border-radius: 200px;  
+  width: 70%;
+ height: 20%;
+ display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  
+}
+
+.d4{
+  right:0px
+}
+
+.header {
+    
+    text-align:Center;
+    line-height:100px;
+    font-family: "Copperplate", "Courier New", monospace;
+    font-size: 32px;
+}
+.nav{
+    border:1px solid white;
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0px 70px 70px  ;
+    text-align:center;
+    line-height: 0px
+}
+.nav li{
+    display:inline;
+}
+.nav a{
+    display:inline-block;
+    padding:10px;
+}     
+  
+}
+
+ul.nav li a {
+  transition: color 0.2s linear;
+  font-size: 18px;
+}
+
+ul.nav li:hover a {
+  color: red;
+}
+
+ul.nav li a {
+  padding: 21px;
+  color: initial;
+  text-decoration: initial;
+}
+.d2{
+  position: absolute;
+    right: 0px;
+    left: 0px;
+}
+.img{
+ border-radius: 200px;  
+  width: 70%;
+ height: 20%;
+ display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  
+}
+
+.d4{
+  right:0px
+}
+.img{
+ border-radius: 790px;
+  
+  width: 20%;
+ 
+ display: block;
+  margin-left: auto;
+  margin-right: 0px 30px ; 
+  
+margin-bottom: 0px
+}
+.div1{
+  text-align: center
+}
 body {font-family: Copperplate, Courier New;}
 * {box-sizing: border-box;}
 
@@ -56,6 +256,41 @@ input[type=submit]:hover {
           window.open("","Thankyou.html","width=500,height=300,toolbar=0");
           document.myForm.submit();
         }
+  function validateForm() {
+  var name = document.forms["myForm"]["name"].value;
+  var email = document.forms["myForm"]["email"].value;
+  var gender = document.forms["myForm"]["gender"].value;
+  var age = document.forms["myForm"]["age"].value;
+  var country = document.forms["myForm"]["country"].value;
+  var message = document.forms["myForm"]["message"].value;
+
+  if (name == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  if (email == "") {
+    alert("Email must be filled out");
+    return false;
+  }
+  if (gender == "") {
+    alert("Gender must be selected");
+    return false;
+  }
+  if (age == "") {
+    alert("Age must be filled out");
+    return false;
+  }
+  if (country == "") {
+    alert("Country must be selected");
+    return false;
+  }
+  if (message == "") {
+    alert("Message must be filled out");
+    return false;
+  }
+  return true;
+}
+
   </script>
   </head>
   <body>
@@ -76,131 +311,40 @@ input[type=submit]:hover {
       
       </div>
     </div>
-<head>
-	<title>Contact Form</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			background-color: #F7F7F7;
-		}
+<h1>Contact Me</h1>
+<form id="myForm" onsubmit="return validateForm()">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
 
-		h1 {
-			text-align: center;
-			margin-top: 50px;
-			color: #333;
-		}
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
 
-		form {
-			margin: 50px auto;
-			padding: 20px;
-			border-radius: 5px;
-			background-color: #FFF;
-			box-shadow: 0px 0px 10px #888;
-			width: 400px;
-		}
+  <label for="gender">Coffee Preference:</label>
+  <input type="radio" id="male" name="gender" value="male" required>
+  <label for="male">Decaf</label>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Caffinated</label>
 
-		input[type=text], select, textarea {
-			width: 100%;
-			padding: 12px;
-			border: 1px solid #ccc;
-			border-radius: 4px;
-			box-sizing: border-box;
-			margin-top: 6px;
-			margin-bottom: 16px;
-			resize: vertical;
-			font-size: 16px;
-			font-family: Arial, sans-serif;
-			color: #333;
-		}
+  <label for="age">Age:</label>
+  <input type="number" id="age" name="age" required>
 
-		input[type=submit], input[type=reset] {
-			background-color: #008CBA;
-			color: #FFF;
-			padding: 12px 20px;
-			border: none;
-			border-radius: 4px;
-			cursor: pointer;
-			font-size: 16px;
-			font-family: Arial, sans-serif;
-			margin-top: 20px;
-		}
+ 
 
-		input[type=submit]:hover, input[type=reset]:hover {
-			background-color: #00688B;
-		}
+  <label for="country">Country:</label>
+  <select id="country" name="country" required>
+    <option value="">Select Country</option>
+    <option value="USA">USA</option>
+    <option value="Canada">Canada</option>
+    <option value="Mexico">Mexico</option>
+  </select>
 
-		label {
-			font-size: 16px;
-			font-family: Arial, sans-serif;
-			color: #333;
-		}
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" rows="4" cols="30" required></textarea>
+ 
+  
+   <input type="checkbox" id="terms" name="terms" required>
+  <label for="terms">I agree to the Terms and Conditions</label>
+  <button type="submit">Submit</button>
+</form>
 
-		.error {
-			color: red;
-			font-size: 14px;
-			font-family: Arial, sans-serif;
-			margin-bottom: 10px;
-		}
-
-		.success {
-			color: green;
-			font-size: 16px;
-			font-family: Arial, sans-serif;
-			margin-top: 10px;
-		}
-	</style>
-</head>
-<body>
-	<h1>Contact Me</h1>
-  <h2 style="text-align: center";>If you don't fill a box you will get a error </h2>
-	<form action="#" method="post">
-		<label for="name">Name:</label>
-		<input type="text" id="name" name="name" required>
-
-		<label for="email">Email:</label>
-		<input type="text" id="email" name="email" required>
-
-		<label for="message">Message:</label>
-		<textarea id="message" name="message" required></textarea>
-
-		<input type="submit" value="Submit">
-		<input type="reset" value="Reset">
-	</form>
-
-	<script>
-		const form = document.querySelector('form');
-		const nameInput = document.querySelector('#name');
-		const emailInput = document.querySelector('#email');
-		const messageInput = document.querySelector('#message');
-
-		form.addEventListener('submit', (e) => {
-			e.preventDefault();
-
-			let errors = [];
-
-			if (nameInput.value.trim() === '') {
-				errors.push('Please enter your name');
-			}
-
-			if (emailInput.value.trim() === '') {
-				errors.push('Please enter your email');
-			} else if (!validateEmail(emailInput.value)) {
-				errors.push('Please enter a valid email address');
-			}
-
-			if (messageInput.value.trim() === '') {
-				errors.push('Please enter a message');
-			}
-
-			if (errors.length > 0) {
-				showErrors(errors);
-			} else {
-				showSuccess();
-  </script>
-  <div>here's a summary of some common debugging methods that can be used when working with HTML and CSS that I found usefull in this chapter:<br>
-
-Use the browser's developer tools: Most modern web browsers come with built-in developer tools that can be used to debug HTML, CSS, and JavaScript code. You can use these tools to inspect elements, modify styles, and debug JavaScript code.
-<br>
-Validate HTML and CSS: Validating your code can help you identify syntax errors and other issues that may be causing problems. You can use online validation tools to check your code and ensure that it's valid.
-<br>
-Check for typos and syntax errors: Even a small typo or syntax error can cause your code to fail. Make sure that you double-check your code for errors and typos.</Div>
+  
