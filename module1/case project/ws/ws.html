@@ -1,0 +1,80 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="ws.css">
+    <title>Final Project</title>
+    <link rel="icon" type="image/x-icon" href="IMG-4098.jpg">
+    <div class="header">
+      <h1>Tyree's Coffee</h1>
+    
+    
+    <div>
+      <ul class="nav">
+ <li><a href="/clientside-/module1/case project/index.html">Home</a></li>
+  <li><a href="/clientside-/module1/case project/shop/shop.html">Shop</a></li>
+  <li><a href="/clientside-/module1/case project/gear/gear.html">Gear</a></li>
+  <li><a href="/clientside-/module1/case project/hours/hours.html">Hours</a></li>
+  <li><a href="/clientside-/module1/case project/checkout/checkout.html">Checkout</a></li>
+  <li><a href="/clientside-/module1/case project/contactme/contactme.html">Contact Me</a></li>
+  <li><a href="/clientside-/module1/case project/ws/ws.html">Web Safety</a></li>
+  <li><a href="/clientside-/module1/case project/personalitytest/personalitytest.html">Personality Test</a></li>
+       
+</ul>
+      </div>
+    </div>
+	<title>Web Security Education</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1>Web Security Education</h1>
+	<p>The internet has become an integral part of our lives, but it's important to remember that there are potential risks associated with it. It's crucial to take measures to ensure our safety online. Here are some tips and information on web security:</p>
+  <h2>What Can a Computer Access?</h2>
+<p>When you visit a website, your browser sends various pieces of information to the server. This information can include:</p>
+<ul>
+	<li>(navigator.app) Your browser's name: <script>document.write(" " + navigator.appName);</script></li>
+	<li>(navigator.appVersion)Your browser's version: <script>document.write(" " + navigator.appVersion);</script></li>
+	<li>(navigator.geolocation)Your geolocation: <span id="geolocation"></span></li>
+	<li>(screen.availHeight)Your screen's height: <script>document.write(" " + screen.availHeight);</script></li>
+	<li>(screen.availWidth)Your screen's width: <script>document.write(" " + screen.availWidth);</script></li>
+	<li>(screen.colorDepth)Your screen's color depth: <script>document.write(" " + screen.colorDepth);</script></li>
+</ul>
+
+<script>
+	// Check if geolocation is supported
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(showPosition);
+	} else {
+		document.getElementById("geolocation").innerHTML = "Geolocation is not supported by this browser.";
+	}
+
+	// Function to show geolocation
+	function showPosition(position) {
+		document.getElementById("geolocation").innerHTML = "Latitude: " + position.coords.latitude + 
+		"<br>Longitude: " + position.coords.longitude;
+	}
+</script>
+<p>All this was gatherd from your computer how cool is that. For fun if you changed you computers resolution and refresh the page it will also change on your screen width and height</p>
+<h2>Tips for Web Security</h2>
+<p>Here are some tips for staying safe online:</p>
+<ul>
+	<li>Use strong passwords and update them regularly.</li>
+	<li>Never share your passwords with anyone.</li>
+	<li>Use two-factor authentication when available.</li>
+	<li>Keep your software and browsers up-to-date to prevent vulnerabilities.</li>
+	<li>Be cautious of phishing scams and never click on suspicious links or download unknown attachments.</li>
+	<li>Use a reputable antivirus software and keep it updated.</li>
+	<li>Be careful when sharing personal information online.</li>
+	<li>Use HTTPS whenever possible to ensure secure communication.</li>
+</ul>
+  <a href=" https://kinsta.com/blog/website-security-tips/">Kinsta.com</a><br>
+  <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security">mozilla.org</a><br>
+  <a href=" https://www.w3.org/TR/geolocation-API/">W3.org</a>
+  </body>
+</html>
+
+
+
