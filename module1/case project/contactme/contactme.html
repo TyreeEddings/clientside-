@@ -249,14 +249,12 @@ input[type=submit]:hover {
   cursor: pointer;
 }
 </style>
-<form id="myForm" action="Thankyou.html">
-  First name: <input type="text" name="fname"><br>
-  Last name: <input type="text" name="lname"><br><br>
-  <input type="button" onclick="myFunction()" value="Submit form">
-</form>
+
    <script>
-  function myFunction() {
-  document.getElementById("myForm").submit();
+    function showAlert() {
+			alert("You clicked the button!");
+		}
+ 
 }
   function validateForm() {
   var name = document.forms["myForm"]["name"].value;
@@ -348,7 +346,7 @@ input[type=submit]:hover {
   
    <input type="checkbox" id="terms" name="terms" required>
   <label for="terms">I agree to the Terms and Conditions</label>
-  <button type="submit">Submit</button>
+  <button type="submit" onclick="showAlert()">Submit</button>
 </form>
 
   
