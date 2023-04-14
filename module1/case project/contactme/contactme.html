@@ -249,13 +249,15 @@ input[type=submit]:hover {
   cursor: pointer;
 }
 </style>
-<script>
-  function submitForm()
-        {
-          document.myForm.target = "Thankyou.html";
-          window.open("","Thankyou.html","width=500,height=300,toolbar=0");
-          document.myForm.submit();
-        }
+<form id="myForm" action="Thankyou.html">
+  First name: <input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br><br>
+  <input type="button" onclick="myFunction()" value="Submit form">
+</form>
+   <script>
+  function myFunction() {
+  document.getElementById("myForm").submit();
+}
   function validateForm() {
   var name = document.forms["myForm"]["name"].value;
   var email = document.forms["myForm"]["email"].value;
