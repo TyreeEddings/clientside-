@@ -1,14 +1,4 @@
 "use strict";
-/*    JavaScript 7th Edition
-      Chapter 9
-      Project 09-04
-
-      Project to store high scores from a game in a cookie
-      Author: Conner Garris
-      Date: 4/25/2023
-
-      Filename: project09-04.js
-*/
 
 /* Page Objects */
 let bestText = document.getElementById("best");
